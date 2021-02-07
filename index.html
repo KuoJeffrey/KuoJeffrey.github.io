@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <title>Hello!</title>
+        <link rel="stylesheet" href="./assets/css/variables.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <style>
-            div{
+            .foo{
                 background-color: orange;
                 width: 100px;
                 height: 400px;
@@ -14,6 +16,59 @@
                 font-family: Arial, sans-serif;
                 font-size: 28px;
                 font-weight: bold;
+            }
+            ul > li{
+                color: green;
+            }
+            a{
+                color: blue;
+            }
+            a[href="https://facebook.com"]{
+                color: red;
+            }
+            button{
+                width: 200px;
+                height: 50px;
+                font-size: 24px;
+                background-color: green;
+            }
+            button:hover{
+                background-color: orange;
+            }
+            @media (min-width: 600px){
+                body{
+                    background-color: grey;
+                }
+            }
+            @media (max-width: 599px){
+                body{
+                    background-color: blue;
+                }
+            }
+            #container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #container > div{
+                background-color: springgreen;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            #grid{
+                background-color: green;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px 200px auto;
+            }
+            .grid-item{
+                background-color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
             }
         </style>
     </head>
@@ -39,7 +94,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Ocean</th>
+                        <th class="foo">Ocean</th>
                         <th>Average Depth</th>
                         <th>Maximum Depth</th>
                     </tr>
@@ -274,9 +329,95 @@
             </form>
         <h2>Style</h2>
         <h2>Size</h2>
-            <div>
+            <div class="foo">
                 Hello World!
             </div>
         <h2>Font</h2>
+        <h2>Descendant</h2>
+            <ol>
+                <li>List item one</li>
+                <li>List item two</li>
+                <ul>
+                    <li>Sublist item one</li>
+                    <li>Sublist item two</li>
+                </ul>
+                <li>List item three</li>
+            </ol>
+        <h2>Attribute</h2>
+            <ul>
+                <li><a href="https://google.com">Google</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://amazon.com">Amazon</a></li>
+            </ul>
+        <h2>Hover</h2>
+            <button>Click Me!</button>
+        <h2>Responsive</h2>
+            <h3>Welcome to my website!</h3>
+        <h2>Flexbox</h2>
+            <div id="container">
+                <div>1. This is some sample text inside a divto demo Flexbox.</div>
+                <div>2. This is some sample text inside a divto demo Flexbox.</div>
+                <div>3. This is some sample text inside a divto demo Flexbox.</div>
+                <div>4. This is some sample text inside a divto demo Flexbox.</div>
+                <div>5. This is some sample text inside a divto demo Flexbox.</div>
+                <div>6. This is some sample text inside a divto demo Flexbox.</div>
+                <div>7. This is some sample text inside a divto demo Flexbox.</div>
+                <div>8. This is some sample text inside a divto demo Flexbox.</div>
+                <div>9. This is some sample text inside a divto demo Flexbox.</div>
+                <div>10. This is some sample text inside a divto demo Flexbox.</div>
+                <div>11. This is some sample text inside a divto demo Flexbox.</div>
+                <div>12. This is some sample text inside a divto demo Flexbox.</div>
+            </div>
+        <h2>Grid</h2>
+            <div id="grid">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+                <div class="grid-item">10</div>
+                <div class="grid-item">11</div>
+                <div class="grid-item">12</div>
+            </div>
+        <h2>Bootstrap!</h2>
+            <div class="alert alert-danger" role="alert">
+                Here is my alert!
+            </div>
+        <h2>Scss!</h2>
+            <ul>
+                <li>Unordered item</li>
+                <li>Unordered item</li>
+                <li>Unordered item</li>
+            </ul>
+            <ol>
+                <li>Ordered item</li>
+                <li>Ordered item</li>
+                <li>Ordered item</li>
+            </ol>
+        <h2>Nesting scss</h2>
+            <div>
+                <p>This is the paragraph inside the div.</p>
+                List inside the div:
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <p>This is the paragraph outside the div.</p>
+            List outside the div:
+            <ul>
+                <li>Item 1</li> 
+                <li>Item 2</li> 
+                <li>Item 3</li> 
+            </ul>
+        <h2>Inheritance scss</h2>
+            <div class="error">This is an error message!</div>
+            <div class="warning">This is a warning message!</div>
+            <div class="success">This is a success message!</div>
     </body>
 </html>
