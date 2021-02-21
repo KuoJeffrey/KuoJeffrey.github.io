@@ -1,0 +1,33 @@
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.quote{
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+#quote-source{
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: right;
+    color: rgb(255, 222, 173);
+    margin-right: 240px;
+}
+
+.site-container{
+    background-color: ghostwhite;
+    padding: 20px;
+    margin: 20px;
+}

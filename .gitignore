@@ -1,5 +1,8 @@
 # Ignore Mac system files
 .DS_Store
 
+# Ignore vscode system files
+.vscode
+
 # Large file size
 # find * -size +100M | cat >> .gitignore
